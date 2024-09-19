@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+</head>
+ 
+<body>
+
+<h3>HELP! I'm bored! Help me figure out what to do today!</h3><br>
+
+<button type="button" id="submit" onclick="onClickSubmit()">submit</button>
+
+<div>
+  <p></p>How about:  <span id="somethingtodo"></span> </p><br>
+ 
+</div>
+
+<script>
+  async function onClickSubmit(){
+    
+    var url = `https://www.boredapi.com/api/activity`
+    var response = await fetch(url);
+    var jsonData = await response.json();
+    document.getElementById("somethingtodo").innerText = jsonData["activity"];
+  
+  }
+</script>
+</body>
+</html>

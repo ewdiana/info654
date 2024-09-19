@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>My first html page</title>
+    <style>#typewriter{font-family: 'Courier New', Courier, monospace; }</style>
+</head> 
+<body>
+    <div id="typewriter"></div>
+    <script>
+        let text ="All work and no play makes Jack a dull boy"+"<br>";
+        let fulltext="";
+        for (count = 1 ; count <= 50 ; ++count)
+            {fulltext = fulltext + text;}
+            document.getElementById("typewriter").innerHTML = fulltext;
+    </script>
+</body>
+</html> 

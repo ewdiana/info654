@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>My first html page</title>
+</head> 
+<body>
+    <h2>My tip calculator</h2>
+    <label for="cost">Cost of Meal</label>
+    <input id="cost" type="number" step=".01" ><br><br>
+    <label for="tipamt">Tip percentage</label>
+    <input id="tipamt" type="number" step=".01" title="Tip percentage"><br><br>
+    <button type="button" onclick="myFunction()">Calculate Tip Amount</button>
+    <h2 id="demo"></h2>
+    <h2 id="demo2"></h2>
+
+    <script>
+    function myFunction() {
+        let x = document.getElementById("cost").value;
+        let y = document.getElementById("tipamt").value;
+
+        let tip = (x*y)/100; 
+	let totalcost = Number(x) + tip;
+        let text = "tip amount: $" + tip.toFixed(2);
+	let text2 = "total meal amount: $" + totalcost.toFixed(2);
+        document.getElementById("demo").innerHTML = text;
+	document.getElementById("demo2").innerHTML = text2;
+    }
+    </script>
+</body>
+</html> 
