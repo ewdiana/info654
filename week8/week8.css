@@ -1,0 +1,69 @@
+/* Week 8 Additions */
+
+img {
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin-right: 30px;
+    background-color: azure;
+}
+#header {
+    width: 80%;
+    border-bottom: 2px solid black;
+    margin: auto;
+    text-align: center;
+}
+#bio {
+    padding: 10px;
+    float: left;
+    width: 60%;
+}
+#rules {
+    border: 2px dashed red;
+    border-radius: 4px;
+    width: 30%;
+    padding: 10px;
+    margin: 10px;
+    float: right;
+}
+tr:nth-child(even) {
+    background: lightgrey;
+}
+#work {
+    clear: both;
+}
+
+/* Week 7 Additions */
+
+h1 {
+    background-color: #57B8FF;
+    border: 8px solid #2176AE;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+h2 {
+    font-style: italic;
+}
+h3 {
+    text-decoration: underline;
+}
+table,
+th,
+td {
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+    padding: 15px;
+}
+th {
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+body {
+    background-color: #caf0f8;
+    font-family: sans-serif;
+    font-size: 1.5em;
+}
+ul {
+    list-style-type: square;
+}
