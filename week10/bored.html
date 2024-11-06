@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-
 <html>
 <head>
+    <title>Fetch Dog Image</title>
 </head>
- 
 <body>
+      <h2>I'm bored! Let's look at random dog pictures!</h2>
+      <button id="fetchDog" onclick="fetchDogImage()">Fetch Dog!</button>
+      <div id="dogImage"></div>
 
-<h3>HELP! I'm bored! Help me figure out what to do today!</h3><br>
+  <script>
+    async function fetchDogImage() {
+      try {
+        const response = await fetch('https://random.dog/woof.json');
+        const data = await response.json();
+        const imageUrl = data.url;
+        document.getElementById('dogImage').innerHTML = `<img src="${imageUrl}" alt="Random Dog">`;
+      } catch (error) {
+        console.error('Error fetching dog image:', error);
+        document.getElementById('dogImage').innerHTML = 'Error loading image.';
+      }
+    }
+  </script>
 
-<button type="button" id="submit" onclick="onClickSubmit()">submit</button>
-
-<div>
-  <p></p>How about:  <span id="somethingtodo"></span> </p><br>
- 
-</div>
-
-<script>
-  async function onClickSubmit(){
-    
-    var url = `https://www.boredapi.com/api/activity`
-    var response = await fetch(url);
-    var jsonData = await response.json();
-    document.getElementById("somethingtodo").innerText = jsonData["activity"];
-  
-  }
-</script>
 </body>
 </html>
