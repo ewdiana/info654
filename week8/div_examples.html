@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            border: 2px solid black;
+            padding: 10px;
+            margin-bottom: 30px;
+            position: relative; /* Used for absolute example */
+        }
+        .static {
+            position: static;
+            background-color: lightblue;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 30px;
+            background-color: lightgreen;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .absolute {
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            padding: 10px;
+        }
+        .fixed {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: orange;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Positioning: Static, Relative, Absolute & Fixed</h1>
+    
+    <h2>1. Static Position (Default)</h2>
+    <div class="static">
+        I am static. I follow the normal document flow.
+    </div>
+
+    <h2>2. Relative Position</h2>
+    <div class="relative">
+        I am relative. I moved 20px down and 30px right from my original place.
+    </div>
+
+    <h2>3. Absolute Position (Inside a Relative Parent)</h2>
+    <div class="container">
+        I am a relative container.
+        <div class="absolute">
+            I am absolute. Positioned inside the container.
+        </div>
+    </div>
+
+    <h2>4. Fixed Position</h2>
+    <div class="fixed">
+        I am fixed. I stay here even when you scroll.
+    </div>
+
+</body>
+</html>

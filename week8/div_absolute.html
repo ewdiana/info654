@@ -1,0 +1,33 @@
+<!-- absolute.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute Position Example</title>
+    <style>
+        .container {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: lightgray;
+            padding: 10px;
+        }
+        .absolute {
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Absolute Position Example</h1>
+    <div class="container">
+        I am a relative container.
+        <div class="absolute">I am absolute inside this container.</div>
+    </div>
+</body>
+</html>
