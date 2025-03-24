@@ -1,0 +1,39 @@
+<!-- clear.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float and Clear Examples</title>
+    <style>
+        .left-div {
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            background-color: blue;
+            float: left;
+        }
+        .right-div {
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            background-color: red;
+            float: right;
+        }
+        .clearfix {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <h1>Float and Clear Examples</h1>
+    <div class="left-div">Left Float</div>
+    <div class="right-div">Right Float</div>
+    <div class="clearfix"></div>
+    <p>This paragraph appears below the floated divs because of the clear property.</p>
+</body>
+</html>
